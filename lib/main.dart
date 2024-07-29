@@ -1,3 +1,4 @@
+import 'package:ether_plex/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Etherplex',
       theme: ThemeData.dark(useMaterial3: true,),
-      home: const Homepage(),
+      home: const Splashscreen(),
     );
   }
 }
