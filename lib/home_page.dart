@@ -23,19 +23,27 @@ class _HomepageState extends State<Homepage> {
           color: Pallete.textcolor,
         ),
       ),
-      body: Column(
-        children: [
-          Center(
-              child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-                height: 150,
-                width: 150,
-                child: Image.asset(
-                  'assets/images/Etherplexchatbot.png',
-                )),
-          )),
-        ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/plainbackground.png'),
+            fit: BoxFit.cover, // Adjust the image to cover the entire background
+          ),
+        ),
+        child: Column(
+          children: [
+            Center(
+                child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                  height: 150,
+                  width: 150,
+                  child: Image.asset(
+                    '',
+                  )),
+            )),
+          ],
+        ),
       ),
     );
   }

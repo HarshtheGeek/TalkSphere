@@ -10,6 +10,6 @@ class Pallete {
   static const Color borderColor = Color.fromRGBO(200, 200, 200, 1);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
-  static const Color textcolor = Color.fromRGBO(191, 64, 191, 1);
+  static const Color textcolor = Color.fromRGBO(33, 108, 218, 1);
 
 }
