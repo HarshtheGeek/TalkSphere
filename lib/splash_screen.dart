@@ -15,7 +15,7 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 7), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Homepage()));
     });
   }
@@ -45,16 +45,36 @@ class _SplashscreenState extends State<Splashscreen> {
 
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
                     'Web3 based Chatbot',
                     style: TextStyle(
-                      fontFamily: 'Etherplex',
+                      fontFamily: 'OCRA',
                       color: Pallete.textcolor,
-                      fontSize: 15,
+                      fontSize: 20,
                     ),
                   ),
                   SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Powered by',
+                        style: TextStyle(
+                          fontFamily: 'OCRA',
+                          color: Pallete.textcolor,
+                          fontSize: 15,
+                        ),
+                      ),
+                      SizedBox(width: 8), // Adds space between the text and the image
+                      Image.asset(
+                        'assets/images/chatgpt.png',
+                        scale: 30,
+                      ),
+                    ],
+                  )
+
                 ],
               ),
             ),

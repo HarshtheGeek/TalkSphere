@@ -1,0 +1,3 @@
+
+
+const OPENAPIKEY='sk-eFQxRKwD4y7mf_SSba6q34rElQktdSCJ1G0wnnVf-tT3BlbkFJ2LSnW3SeQxx3wjN0dUp4SGJqXaZnEdgFD8wj0vwWoA';
