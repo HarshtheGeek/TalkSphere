@@ -15,9 +15,9 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 7), () {
+    Timer(const Duration(seconds: 7), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Homepage()));
+          context, MaterialPageRoute(builder: (context) => const Homepage()));
     });
   }
 
@@ -25,7 +25,7 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/backgroundfinalsplash.png'),
             fit:
@@ -38,7 +38,7 @@ class _SplashscreenState extends State<Splashscreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Etherplex',
                     style: TextStyle(
                       fontFamily: 'Etherplex',
@@ -46,8 +46,8 @@ class _SplashscreenState extends State<Splashscreen> {
                       fontSize: 65,
                     ),
                   ),
-                  SizedBox(height: 5),
-                  Text(
+                  const SizedBox(height: 5),
+                  const Text(
                     'Web3 based Chatbot',
                     style: TextStyle(
                       fontFamily: 'OCRA',
@@ -55,12 +55,12 @@ class _SplashscreenState extends State<Splashscreen> {
                       fontSize: 20,
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'Powered by',
                         style: TextStyle(
                           fontFamily: 'OCRA',
@@ -68,7 +68,7 @@ class _SplashscreenState extends State<Splashscreen> {
                           fontSize: 15,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                           width:
                               8), // Adds space between the text and the image
                       Image.asset(
@@ -80,7 +80,7 @@ class _SplashscreenState extends State<Splashscreen> {
                 ],
               ),
             ),
-            Positioned(
+            const Positioned(
               bottom: 50,
               left: 0,
               right: 0,

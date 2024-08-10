@@ -30,10 +30,10 @@ class _GeminipageState extends State<Geminipage> {
             width: 90,   // Adjust the width as needed
           ),
           centerTitle: true,
-          backgroundColor: Color(0xFF181818),
+          backgroundColor: const Color(0xFF181818),
         ),
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/geminibackground.png'),
               fit: BoxFit.cover,
@@ -48,7 +48,7 @@ class _GeminipageState extends State<Geminipage> {
       currentUser: currentUser,
       onSend: _sendMessage,
       messages: messages,
-      messageOptions: MessageOptions(
+      messageOptions: const MessageOptions(
         currentUserContainerColor: Pallete.mainFontColor,
         currentUserTextColor: Pallete.whiteColor,
         messagePadding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
@@ -57,10 +57,10 @@ class _GeminipageState extends State<Geminipage> {
         inputDecoration: InputDecoration(
           hintText:
               "Type a message commrade...",
-          hintStyle: TextStyle(color: Pallete.whiteColor,fontFamily: 'OCRA'),
+          hintStyle: const TextStyle(color: Pallete.whiteColor,fontFamily: 'OCRA'),
           filled: true,
           fillColor: Pallete.mainFontColor,
-          contentPadding: EdgeInsets.symmetric(
+          contentPadding: const EdgeInsets.symmetric(
               vertical: 20.0,
               horizontal: 20.0),
           border: OutlineInputBorder(
@@ -70,9 +70,9 @@ class _GeminipageState extends State<Geminipage> {
           ),
         ),
         inputToolbarPadding:
-            EdgeInsets.all(10),
+            const EdgeInsets.all(10),
         inputToolbarMargin:
-            EdgeInsets.all(5),
+            const EdgeInsets.all(5),
         inputMaxLines: 5,
       ),
     );

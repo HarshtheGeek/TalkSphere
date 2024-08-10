@@ -53,15 +53,15 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
-        title: Text(
+        backgroundColor: const Color(0xFF181818),
+        title: const Text(
           'Etherplex',
           style: TextStyle(fontFamily: 'Etherplex', color: Pallete.firstSuggestionBoxColor),
         ),
         centerTitle: true,
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/geminibackground.png'),
             fit: BoxFit.cover,
@@ -105,9 +105,9 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   alignment: Alignment.centerLeft,
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     top: 30,
                     left: 22,
                   ),
@@ -120,10 +120,10 @@ class _HomepageState extends State<Homepage> {
                         fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Column(
+                const Column(
                   children: [
                     FeatureBox(
                       color: Pallete.mainFontColor,
@@ -133,7 +133,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
                     FeatureBox(
                       color: Pallete.mainFontColor,
@@ -143,7 +143,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
                     FeatureBox(
                       color: Pallete.mainFontColor,
@@ -169,7 +169,7 @@ class _HomepageState extends State<Homepage> {
                     initSpeechToText();
                   }
                 },
-                child: Icon(Icons.mic),
+                child: const Icon(Icons.mic),
                 backgroundColor: Pallete.blackColor, // Change the color here
               ),
             ),
@@ -181,7 +181,7 @@ class _HomepageState extends State<Homepage> {
                   // Navigate to the next page
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>Geminipage()),
+                    MaterialPageRoute(builder: (context) =>const Geminipage()),
                   );
                 },
                 backgroundColor: Colors.black, // Make the FAB transparent

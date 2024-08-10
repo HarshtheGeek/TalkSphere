@@ -26,7 +26,7 @@ class _FeatureBoxState extends State<FeatureBox> {
       ),
       decoration: BoxDecoration(
           color: widget.color,
-          borderRadius: BorderRadius.all(Radius.circular(10))),
+          borderRadius: const BorderRadius.all(Radius.circular(10))),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 15).copyWith(
           left: 15,
@@ -37,16 +37,16 @@ class _FeatureBoxState extends State<FeatureBox> {
               alignment: Alignment.centerLeft,
               child: Text(
                 widget.headertext,
-                style: TextStyle(
+                style: const TextStyle(
                     fontFamily: 'OCRA',
                     color: Pallete.whiteColor,
                     fontSize: 18,fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Text(
               widget.descriptionText,
-              style: TextStyle(
+              style: const TextStyle(
                   fontFamily: 'OCRA',
                   color: Pallete.firstSuggestionBoxColor,
                   fontSize: 15),
