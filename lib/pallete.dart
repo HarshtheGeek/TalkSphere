@@ -12,6 +12,9 @@ class Pallete {
   static const Color whiteColor = Colors.white;
   static const Color textcolor = Color.fromRGBO(33, 108, 218, 1);
   static const Color container = Color.fromRGBO(31, 31, 31, 1);
+  static const Color geminichat = Color.fromRGBO(204, 204, 255, 1);
+
+
 
 
 }

@@ -48,7 +48,7 @@ class _FeatureBoxState extends State<FeatureBox> {
               widget.descriptionText,
               style: TextStyle(
                   fontFamily: 'OCRA',
-                  color: Pallete.textcolor,
+                  color: Pallete.firstSuggestionBoxColor,
                   fontSize: 15),
             ),
           ],

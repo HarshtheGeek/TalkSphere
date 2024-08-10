@@ -1,6 +1,8 @@
 import 'package:ether_plex/container_box.dart';
+import 'package:ether_plex/geminipage.dart';
 import 'package:ether_plex/pallete.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
@@ -51,21 +53,17 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF181818),
         title: Text(
           'Etherplex',
-          style: TextStyle(fontFamily: 'Etherplex', color: Pallete.textcolor),
+          style: TextStyle(fontFamily: 'Etherplex', color: Pallete.firstSuggestionBoxColor),
         ),
         centerTitle: true,
-        leading: Icon(
-          Icons.menu,
-          color: Pallete.textcolor,
-        ),
       ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/plainbackground.png'),
+            image: AssetImage('assets/images/geminibackground.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -76,11 +74,9 @@ class _HomepageState extends State<Homepage> {
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      height: 150,
-                      width: 150,
-                      child: Image.asset('assets/images/Etherplexlogo.png'),
-                    ),
+                      child: Lottie.asset('assets/animations/lottieanimation3.json',
+                      width: 280,
+                      height: 155),
                   ),
                 ),
                 Container(
@@ -92,7 +88,7 @@ class _HomepageState extends State<Homepage> {
                     top: 30,
                   ),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Pallete.textcolor),
+                    border: Border.all(color: Pallete.firstSuggestionBoxColor),
                     borderRadius: BorderRadius.circular(20).copyWith(
                       topLeft: Radius.zero,
                     ),
@@ -103,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                       'Hey User, What task can I do for you today?',
                       style: TextStyle(
                           fontFamily: 'OCRA',
-                          color: Pallete.textcolor,
+                          color: Pallete.firstSuggestionBoxColor,
                           fontSize: 20),
                     ),
                   ),
@@ -119,9 +115,9 @@ class _HomepageState extends State<Homepage> {
                     'Here are few commands :',
                     style: TextStyle(
                         fontFamily: 'OCRA',
-                        color: Pallete.textcolor,
+                        color: Pallete.firstSuggestionBoxColor,
                         fontSize: 25,
-                        fontWeight: FontWeight.w200),
+                        fontWeight: FontWeight.normal),
                   ),
                 ),
                 SizedBox(
@@ -164,18 +160,44 @@ class _HomepageState extends State<Homepage> {
               right: 20,
               child: FloatingActionButton(
                 onPressed: () async {
-                  if(await speechToText.hasPermission && speechToText.isNotListening){
+                  if (await speechToText.hasPermission &&
+                      speechToText.isNotListening) {
                     await startListening();
-                  } else if(speechToText.isListening){
+                  } else if (speechToText.isListening) {
                     await stopListening();
-                  } else{
+                  } else {
                     initSpeechToText();
                   }
                 },
                 child: Icon(Icons.mic),
-                backgroundColor: Pallete.textcolor, // Change the color here
+                backgroundColor: Pallete.blackColor, // Change the color here
               ),
             ),
+            Positioned(
+              bottom: 100,
+              right: 20,
+              child: FloatingActionButton(
+                onPressed: () {
+                  // Navigate to the next page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>Geminipage()),
+                  );
+                },
+                backgroundColor: Colors.black, // Make the FAB transparent
+                elevation: 0, // Remove shadow
+                child: SizedBox(
+                  width: 35,
+                  height: 35,
+                  child: Lottie.asset(
+                    'assets/animations/geminiiii.json', // Replace with your Lottie animation
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+
+
           ],
         ),
       ),
