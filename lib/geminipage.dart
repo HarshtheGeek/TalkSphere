@@ -25,9 +25,9 @@ class _GeminipageState extends State<Geminipage> {
     return Scaffold(
         appBar: AppBar(
           title: Lottie.asset(
-            'assets/animations/geminilottie.json',  // Path to your Lottie animation file
-            height: 90,  // Adjust the height as needed
-            width: 90,   // Adjust the width as needed
+            'assets/animations/geminilottie.json',
+            height: 90, 
+            width: 90,
           ),
           centerTitle: true,
           backgroundColor: const Color(0xFF181818),
@@ -56,7 +56,7 @@ class _GeminipageState extends State<Geminipage> {
       inputOptions: InputOptions(
         inputDecoration: InputDecoration(
           hintText:
-              "Type a message commrade...",
+              "Type a message comrade...",
           hintStyle: const TextStyle(color: Pallete.whiteColor,fontFamily: 'OCRA'),
           filled: true,
           fillColor: Pallete.mainFontColor,

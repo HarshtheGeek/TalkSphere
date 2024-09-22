@@ -3,6 +3,7 @@ import 'package:ether_plex/home_page.dart';
 import 'package:ether_plex/pallete.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:lottie/lottie.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -15,7 +16,7 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 7), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Homepage()));
     });
@@ -39,23 +40,14 @@ class _SplashscreenState extends State<Splashscreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Etherplex',
+                    'TaLkSphere',
                     style: TextStyle(
                       fontFamily: 'Etherplex',
                       color: Pallete.firstSuggestionBoxColor,
-                      fontSize: 65,
+                      fontSize: 60,
                     ),
                   ),
                   const SizedBox(height: 5),
-                  const Text(
-                    'Web3 based Chatbot',
-                    style: TextStyle(
-                      fontFamily: 'OCRA',
-                      color: Pallete.firstSuggestionBoxColor,
-                      fontSize: 20,
-                    ),
-                  ),
-                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,10 +62,11 @@ class _SplashscreenState extends State<Splashscreen> {
                       ),
                       const SizedBox(
                           width:
-                              8), // Adds space between the text and the image
+                              8),
                       Image.asset(
-                        'assets/images/chatgpt.png',
-                        scale: 30,
+                        'assets/images/geminiimage.png',
+                        height: 70,
+                        width: 70,
                       ),
                     ],
                   )
