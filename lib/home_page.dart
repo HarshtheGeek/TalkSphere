@@ -1,3 +1,4 @@
+import 'package:ether_plex/Description_page.dart';
 import 'package:ether_plex/Image_generator.dart';
 import 'package:ether_plex/container_box.dart';
 import 'package:ether_plex/geminipage.dart';
@@ -99,10 +100,11 @@ class _HomepageState extends State<Homepage> {
                 description: 'Get creative with your personal assistant powered by Gemini',
                 destination: const AIgenerator(),
               ),
-              const FeatureBox(
-                color: Pallete.mainFontColor,
-                headertext: 'Smart Voice Assistant',
-                descriptionText: 'Get the best of both with voice assistant powered by ChatGPT',
+              buildFeatureBox(
+                context,
+                title: 'Gen Explains',
+                description: 'Powerful Image description generator at your fingertips',
+                destination: const ImageChat(),
               ),
             ],
           ),
@@ -116,7 +118,7 @@ class _HomepageState extends State<Homepage> {
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Lottie.asset(
-          'assets/animations/lottieanimation3.json',
+          'assets/animations/lottieanimation3.json', // Ensure the file path is correct
           width: 280,
           height: 155,
         ),
