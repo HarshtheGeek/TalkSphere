@@ -1,4 +1,4 @@
-# ether_plex
+# TalkSphere
 
 Chatbot with the features of webthree
 
